@@ -30,10 +30,12 @@ class TreeNode:
         self.right = right
 
 
-def compare_lists(a: List[Any], b: List[Any]) -> bool:
-    if len(a) != len(b):
+def compare_lists(exp: List[Any], act: List[Any], debug=False) -> bool:
+    if debug:
+        print(f"Exp: {exp}\tActual: {act}")
+    if len(exp) != len(act):
         return False
-    return len([val for val in a if val in b]) == len(b)
+    return len([val for val in exp if val in act]) == len(act)
 
 
 def compare_tree_nodes(expected: TreeNode, actual: TreeNode, debug=False) -> bool:
