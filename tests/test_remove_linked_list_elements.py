@@ -5,7 +5,9 @@ DEBUG = False
 
 
 def test_remove_linked_list_elements_1():
-    head = ListNode(1, ListNode(2, ListNode(6, ListNode(3, ListNode(4, ListNode(5, ListNode(6)))))))
+    head = ListNode(
+        1, ListNode(2, ListNode(6, ListNode(3, ListNode(4, ListNode(5, ListNode(6))))))
+    )
     val = 6
     expected = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
     actual = remove_elements(head, val)

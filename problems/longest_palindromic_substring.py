@@ -37,7 +37,7 @@ def longest_palindrome(s: str) -> str:
         if max_len > end - start + 1:
             start = i - (max_len - 1) // 2
             end = i + max_len // 2
-    return s[start: end + 1]
+    return s[start : end + 1]
 
 
 """

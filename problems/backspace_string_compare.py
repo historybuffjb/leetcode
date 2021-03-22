@@ -12,7 +12,7 @@ def _generate_text(s: str) -> str:
             stack.append(letter)
         elif stack:
             stack.pop(-1)
-    return ''.join(stack)
+    return "".join(stack)
 
 
 def backspace_compare(s: str, t: str) -> bool:

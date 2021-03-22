@@ -11,7 +11,9 @@ def _identical(a: TreeNode, b: TreeNode) -> bool:
         return True
     if not a or not b:
         return False
-    return a.val == b.val and _identical(a.left, b.left) and _identical(a.right, b.right)
+    return (
+        a.val == b.val and _identical(a.left, b.left) and _identical(a.right, b.right)
+    )
 
 
 def is_subtree(s: TreeNode, t: TreeNode) -> bool:

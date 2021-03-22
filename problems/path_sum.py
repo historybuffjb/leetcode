@@ -34,4 +34,3 @@ Run DETAILS
 Runtime: 36 ms, faster than 95.29% of Python3 online submissions for Path Sum.
 Memory Usage: 16 MB, less than 50.72% of Python3 online submissions for Path Sum.
 """
-

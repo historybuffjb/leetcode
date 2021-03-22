@@ -23,8 +23,18 @@ def test_add_two_numbers_2():
 
 
 def test_add_two_numbers_3():
-    l1 = ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9)))))))
+    l1 = ListNode(
+        9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9, ListNode(9))))))
+    )
     l2 = ListNode(9, ListNode(9, ListNode(9, ListNode(9))))
-    expected = ListNode(8, ListNode(9, ListNode(9, ListNode(9, ListNode(0, ListNode(0, ListNode(0, ListNode(1))))))))
+    expected = ListNode(
+        8,
+        ListNode(
+            9,
+            ListNode(
+                9, ListNode(9, ListNode(0, ListNode(0, ListNode(0, ListNode(1)))))
+            ),
+        ),
+    )
     actual = add_two_numbers(l1, l2)
     assert compare_list_nodes(expected, actual, DEBUG) is True

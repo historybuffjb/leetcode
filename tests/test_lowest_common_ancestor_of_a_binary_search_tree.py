@@ -1,4 +1,7 @@
-from problems.lowest_common_ancestor_of_a_binary_search_tree import lowest_common_ancestor, TreeNode
+from problems.lowest_common_ancestor_of_a_binary_search_tree import (
+    lowest_common_ancestor,
+    TreeNode,
+)
 
 
 def test_lowest_common_ancestor_of_a_binary_search_tree_1():

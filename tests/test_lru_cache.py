@@ -14,7 +14,18 @@ def run_test_loop(operations, values):
 
 
 def test_lru_cache_1():
-    operations = ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]
+    operations = [
+        "LRUCache",
+        "put",
+        "put",
+        "get",
+        "put",
+        "get",
+        "put",
+        "get",
+        "get",
+        "get",
+    ]
     values = [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
     expected = [None, None, None, 1, None, -1, None, -1, 3, 4]
     actual = run_test_loop(operations, values)

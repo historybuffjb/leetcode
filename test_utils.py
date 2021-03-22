@@ -39,7 +39,6 @@ def compare_lists(exp: List[Any], act: List[Any], debug=False) -> bool:
 
 
 def compare_tree_nodes(expected: TreeNode, actual: TreeNode, debug=False) -> bool:
-
     def _check_nodes(a: TreeNode, b: TreeNode) -> bool:
         nonlocal debug
         if debug:

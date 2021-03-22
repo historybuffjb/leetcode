@@ -33,14 +33,99 @@ def test_remove_duplicates_from_sorted_list_4():
 
 
 def test_remove_duplicates_from_sorted_list_5():
-    head = ListNode(-53, ListNode(-23, ListNode(-23, ListNode(-17, ListNode(-1, ListNode(4, ListNode(4, ListNode(17, ListNode(65, ListNode(78, ListNode(78, ListNode(99, ListNode(100)))))))))))))
-    expected = ListNode(-53, ListNode(-23, ListNode(-17, ListNode(-1, ListNode(4, ListNode(17, ListNode(65, ListNode(78, ListNode(99, ListNode(100))))))))))
+    head = ListNode(
+        -53,
+        ListNode(
+            -23,
+            ListNode(
+                -23,
+                ListNode(
+                    -17,
+                    ListNode(
+                        -1,
+                        ListNode(
+                            4,
+                            ListNode(
+                                4,
+                                ListNode(
+                                    17,
+                                    ListNode(
+                                        65,
+                                        ListNode(
+                                            78,
+                                            ListNode(78, ListNode(99, ListNode(100))),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    )
+    expected = ListNode(
+        -53,
+        ListNode(
+            -23,
+            ListNode(
+                -17,
+                ListNode(
+                    -1,
+                    ListNode(
+                        4,
+                        ListNode(
+                            17, ListNode(65, ListNode(78, ListNode(99, ListNode(100))))
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    )
     actual = delete_duplicates(head)
     assert compare_list_nodes(expected, actual, DEBUG) is True
 
 
 def test_remove_duplicates_from_sorted_list_6():
-    head = ListNode(1, ListNode(1, ListNode(1, ListNode(1, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, ListNode(3, ListNode(3, ListNode(3, ListNode(3, ListNode(3, ListNode(3)))))))))))))))
+    head = ListNode(
+        1,
+        ListNode(
+            1,
+            ListNode(
+                1,
+                ListNode(
+                    1,
+                    ListNode(
+                        1,
+                        ListNode(
+                            1,
+                            ListNode(
+                                2,
+                                ListNode(
+                                    3,
+                                    ListNode(
+                                        3,
+                                        ListNode(
+                                            3,
+                                            ListNode(
+                                                3,
+                                                ListNode(
+                                                    3,
+                                                    ListNode(
+                                                        3, ListNode(3, ListNode(3))
+                                                    ),
+                                                ),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+    )
     expected = ListNode(1, ListNode(2, ListNode(3)))
     actual = delete_duplicates(head)
     assert compare_list_nodes(expected, actual, DEBUG) is True

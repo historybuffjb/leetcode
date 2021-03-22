@@ -68,7 +68,17 @@ def test_word_break_2_8():
 
 def test_word_break_2_9():
     s = "ifindleetcodefun"
-    word_dict = ["i", "leet", "leetcode", "code", "fun", "find", "codefun", "test", "do"]
+    word_dict = [
+        "i",
+        "leet",
+        "leetcode",
+        "code",
+        "fun",
+        "find",
+        "codefun",
+        "test",
+        "do",
+    ]
     expected = ["i find leetcode fun", "i find leet code fun", "i find leet codefun"]
     actual = word_break(s, word_dict)
     assert compare_lists(expected, actual) is True
@@ -76,7 +86,18 @@ def test_word_break_2_9():
 
 def test_word_break_2_10():
     s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa "
-    word_dict = ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"]
+    word_dict = [
+        "a",
+        "aa",
+        "aaa",
+        "aaaa",
+        "aaaaa",
+        "aaaaaa",
+        "aaaaaaa",
+        "aaaaaaaa",
+        "aaaaaaaaa",
+        "aaaaaaaaaa",
+    ]
     expected = []
     actual = word_break(s, word_dict)
     assert compare_lists(expected, actual) is True

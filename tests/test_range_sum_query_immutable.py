@@ -12,7 +12,9 @@ def run_actions(actions: List[str], inputs: List[List[int]]) -> List[int]:
             driver = NumArray(inputs[action_counter])
             result.append(None)
         elif action == "sumRange":
-            result.append(driver.sum_range(inputs[action_counter][0], inputs[action_counter][1]))
+            result.append(
+                driver.sum_range(inputs[action_counter][0], inputs[action_counter][1])
+            )
         action_counter += 1
     return result
 

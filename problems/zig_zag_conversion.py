@@ -27,7 +27,7 @@ def convert(s: str, num_rows: int) -> str:
         if cur_row == 0 or cur_row == num_rows - 1:
             is_down ^= True
         cur_row += 1 if is_down else -1
-    return ''.join(final_result)
+    return "".join(final_result)
 
 
 """

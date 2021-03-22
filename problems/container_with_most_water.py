@@ -11,7 +11,6 @@ def max_area(height: List[int]) -> int:
     pass
 
 
-
 """
 Runtime: 744 ms, faster than 5.25% of Python3 online submissions for Container With Most Water.
 Memory Usage: 26.5 MB, less than 20.63% of Python3 online submissions for Container With Most Water.

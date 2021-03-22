@@ -15,7 +15,7 @@ def reverse(x: int) -> int:
         * Add back the sign at the end
     """
     int_max = 2 ** 31 - 1
-    int_min = -2 ** 31
+    int_min = -(2 ** 31)
     if x >= int_max or x <= int_min:
         return 0
     result = 0
