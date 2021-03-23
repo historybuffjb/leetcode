@@ -17,7 +17,7 @@ def test_longest_word_in_dictionary_2():
 
 def test_longest_word_in_dictionary_3():
     words = ["a"]
-    expected = ""
+    expected = "a"
     actual = longest_word(words)
     assert actual == expected
 
