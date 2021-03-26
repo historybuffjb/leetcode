@@ -1,7 +1,7 @@
 from problems.merge_two_binary_trees import merge_trees, TreeNode
 from test_utils import compare_tree_nodes
 
-DEBUG = True
+DEBUG = False
 
 
 def test_merge_two_binary_trees_1():

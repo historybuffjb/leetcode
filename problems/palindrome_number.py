@@ -9,11 +9,8 @@ def is_palindrome(x: int) -> bool:
     temp = x
     while temp > 0:
         new_digit = temp % 10
-        print(new_digit)
         result = result * 10 + new_digit
-        print(result)
         temp //= 10
-        print(temp)
     return result == x
 
 
