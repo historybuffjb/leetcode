@@ -89,3 +89,14 @@ def test_number_of_islands_8():
     expected = 1
     actual = num_islands(grid)
     assert actual == expected
+
+
+def test_number_of_islands_9():
+    grid = [
+        ["1", "0", "1", "1", "1"],
+        ["1", "0", "1", "0", "1"],
+        ["1", "1", "1", "0", "1"],
+    ]
+    expected = 1
+    actual = num_islands(grid)
+    assert actual == expected

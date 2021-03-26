@@ -14,16 +14,24 @@ from collections import OrderedDict
 
 class LRUCache:
     def __init__(self, capacity: int):
-        pass
+        self._capacity = capacity
+        self._dict = OrderedDict()
 
     def get(self, key: int) -> int:
-        pass
+        if key not in self._dict:
+            return -1
+        self._dict.move_to_end(key)
+        return self._dict[key]
 
     def put(self, key: int, value: int) -> None:
-        pass
+        if key in self._dict:
+            self._dict.move_to_end(key)
+        self._dict[key] = value
+        if len(self._dict) > self._capacity:
+            self._dict.popitem(last=False)
 
 
 """
-Runtime: 180 ms, faster than 74.55% of Python3 online submissions for LRU Cache.
-Memory Usage: 23.5 MB, less than 76.03% of Python3 online submissions for LRU Cache.
+Runtime: 172 ms, faster than 84.70% of Python3 online submissions for LRU Cache.
+Memory Usage: 23.5 MB, less than 73.94% of Python3 online submissions for LRU Cache.
 """

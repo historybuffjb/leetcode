@@ -8,10 +8,27 @@ from typing import List
 
 
 def max_area(height: List[int]) -> int:
-    pass
+    """
+    Explanation
+    The key thing here is that we need to find two lines separately, which together form a container with the most
+    water. We can do this by using a left and right pointer, and start at the end. We will progressively move
+    right for the left counter and left for the right counter. At each change we make the following choices:
+        * Pick the largest line. Move the other towards the middle.
+        * If we ever cross the left and right pointers we can stop and return the found maximum.
+    """
+    left = 0
+    right = len(height) - 1
+    largest = 0
+    while left < right:
+        largest = max(largest, min(height[left], height[right]) * (right - left))
+        if height[left] < height[right]:
+            left += 1
+        else:
+            right -= 1
+    return largest
 
 
 """
-Runtime: 744 ms, faster than 5.25% of Python3 online submissions for Container With Most Water.
-Memory Usage: 26.5 MB, less than 20.63% of Python3 online submissions for Container With Most Water.
+Runtime: 716 ms, faster than 19.84% of Python3 online submissions for Container With Most Water.
+Memory Usage: 26.5 MB, less than 21.55% of Python3 online submissions for Container With Most Water.
 """

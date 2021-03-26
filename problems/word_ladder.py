@@ -13,11 +13,30 @@ from typing import List
 
 
 def ladder_length(begin_word: str, end_word: str, word_list: List[str]) -> int:
-    pass
+    """
+    Explanation
+    This is a simple depth first search. The trick is to make vertices be a word minus one letter (all perms)
+    """
+    graph = defaultdict(list)
+    for word in word_list:
+        for i in range(len(word)):
+            graph["".join([word[:i], "_", word[i + 1 :]])].append(word)
+    visited = set()
+    queue = deque([(begin_word, 1)])
+    while queue:
+        word, level = queue.popleft()
+        if word == end_word:
+            return level
+        if word not in visited:
+            visited.add(word)
+            for i in range(len(word)):
+                for neighbor in graph["".join([word[:i], "_", word[i + 1 :]])]:
+                    queue.append((neighbor, level + 1))
+    return 0
 
 
 """
 Run DETAILS
-Runtime: 140 ms, faster than 67.41% of Python3 online submissions for Word Ladder.
-Memory Usage: 18.3 MB, less than 17.89% of Python3 online submissions for Word Ladder.
+Runtime: 164 ms, faster than 59.44% of Python3 online submissions for Word Ladder.
+Memory Usage: 18.2 MB, less than 17.32% of Python3 online submissions for Word Ladder.
 """

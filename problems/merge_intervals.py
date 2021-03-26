@@ -6,11 +6,18 @@ from typing import List
 
 
 def merge(intervals: List[List[int]]) -> List[List[int]]:
-    pass
+    intervals.sort(key=lambda x: x[0])
+    result = []
+    for interval in intervals:
+        if not result or result[-1][1] < interval[0]:
+            result.append(interval)
+        else:
+            result[-1][1] = max(result[-1][1], interval[1])
+    return result
 
 
 """
 Run DETAILS
-Runtime: 80 ms, faster than 91.78% of Python3 online submissions for Merge Intervals.
-Memory Usage: 16.2 MB, less than 57.40% of Python3 online submissions for Merge Intervals.
+Runtime: 76 ms, faster than 97.43% of Python3 online submissions for Merge Intervals.
+Memory Usage: 16.2 MB, less than 56.17% of Python3 online submissions for Merge Intervals.
 """

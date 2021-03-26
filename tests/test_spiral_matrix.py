@@ -45,7 +45,12 @@ def test_spiral_matrix_6():
 
 
 def test_spiral_matrix_7():
-    matrix = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20]]
+    matrix = [
+        [1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10],
+        [11, 12, 13, 14, 15],
+        [16, 17, 18, 19, 20],
+    ]
     expected = [1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12]
     actual = spiral_order(matrix)
     assert compare_lists(expected, actual) is True

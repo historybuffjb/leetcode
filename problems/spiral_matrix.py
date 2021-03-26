@@ -9,6 +9,7 @@ def spiral_order(matrix: List[List[int]]) -> List[int]:
     Explanation
     I just took the answer here. I could not figure this out at all.
     """
+
     def spiral_coords(r1, c1, r2, c2):
         for c in range(c1, c2 + 1):
             yield r1, c

@@ -9,17 +9,17 @@ from test_utils import ListNode
 
 def add_two_numbers(l1: ListNode, l2: ListNode) -> ListNode:
     """
-   EXPLANATION:
-      * Get the longest list then:
-      * Loop through the longest list until both l1 nad l2 are null and do the following:
-         * Sum l1 val and l2 val (if they exist) and add remainder
-         * remainder is sum / 10
-         * create node of sum
-         * set node to next
-      * At the end check if there is still a remainder:
-         * if so create a list element with that and append
-      * Return head of nodes
-   """
+    EXPLANATION:
+       * Get the longest list then:
+       * Loop through the longest list until both l1 nad l2 are null and do the following:
+          * Sum l1 val and l2 val (if they exist) and add remainder
+          * remainder is sum / 10
+          * create node of sum
+          * set node to next
+       * At the end check if there is still a remainder:
+          * if so create a list element with that and append
+       * Return head of nodes
+    """
     result = ListNode()
     traverser = result
     remainder = 0
